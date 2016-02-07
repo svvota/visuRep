@@ -32,6 +32,23 @@ namespace Boxtester
         {
             return color;
         }
+        
+
+        /// <summary>
+        /// Property with custom value when null.
+        /// </summary>
+        static string Name
+        {
+            get
+            {
+                return _name ?? "Default";
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+        static string _name;
         protected int height;
         protected int width;
         protected string color;
@@ -43,5 +60,12 @@ namespace Boxtester
             return width * height;
         }
 
+    }
+    class Yuzey : Kare {
+
+        public int Yuzeysel() {
+            return (width + height)*2;
+
+        }
     }
 }
