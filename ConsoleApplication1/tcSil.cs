@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace Boxtester
 {
     class tcSil
     {
@@ -29,9 +29,21 @@ namespace ConsoleApplication1
             set { _name = value; }
         }
     }
-    class trcaDeneme
-    //{
-    //    try{int a =5;int b = 10;int c = a + b;  }
-    //    catch{}
+    public class trcaDeneme
+    {
+        public void arrLi() {
+
+            try {
+                int[] arri = new int[2];
+                arri[0] = 1;
+                arri[1] = 2;
+                arri[2] = 3;
+            }
+            catch (Exception ex) {
+                Console.WriteLine("Burda hata var");
+            }
+
+        }
+   
     }
 }

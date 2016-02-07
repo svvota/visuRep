@@ -23,13 +23,14 @@ namespace Boxtester
                 Console.WriteLine("2. Hesap Makinası");
                 Console.WriteLine("3. Kutunun Ağırlık");
                 Console.WriteLine("4. Kare Alan");
+                Console.WriteLine("5. Array Try Catch");
                 //drLabel:
-                
+
                 //    try { }
                 //    catch (Exception ex) { Console.WriteLine("Error: {0}", ex.Message); goto drLabel; }
 
                 int grade = int.Parse(Console.ReadLine());
-                if (grade == 1 || grade == 2 || grade == 3 || grade == 4)
+                if (grade == 1 || grade == 2 || grade == 3 || grade == 4 || grade == 5)
                 {
 
                     switch (grade)
@@ -113,6 +114,12 @@ namespace Boxtester
                             kareHes.setWidth(int.Parse(Console.ReadLine()));
                             Console.WriteLine(kareHes.kareAlan());
                             Console.ReadKey();
+                            break;
+
+                        case 5:
+                            Console.WriteLine("2 değerli arraya 3 değer sokarsan");
+                            trcaDeneme arrL = new trcaDeneme();
+                            arrL.arrLi();
                             break;
                     }
 
