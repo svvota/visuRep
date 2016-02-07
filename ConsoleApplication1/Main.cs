@@ -20,13 +20,15 @@ namespace Boxtester
                 Console.WriteLine("Merhaba Çağrının KPSS Destek Uygulamasına Hoş Geldiniz");
                 Console.WriteLine("1. Kutunun Hesapları");
                 Console.WriteLine("2. Hesap Makinası");
-            //drLabel:
+                Console.WriteLine("3. Kutunun Ağırlık");
+                Console.WriteLine("4. Kare Alan");
+                //drLabel:
 
-            //    try { }
-            //    catch (Exception ex) { Console.WriteLine("Error: {0}", ex.Message); goto drLabel; }
+                //    try { }
+                //    catch (Exception ex) { Console.WriteLine("Error: {0}", ex.Message); goto drLabel; }
 
                 int grade = int.Parse(Console.ReadLine());
-                if (grade == 1 || grade == 2 || grade == 3)
+                if (grade == 1 || grade == 2 || grade == 3 || grade == 4)
                 {
 
                     switch (grade)
@@ -65,9 +67,9 @@ namespace Boxtester
 
                             int switcher = int.Parse(Console.ReadLine());
 
-                            Console.WriteLine("İlk Sayıyı Giriniz");
+                            Console.Write("İlk Sayıyı Giriniz");
                             int ilkSayi = int.Parse(Console.ReadLine());
-                            Console.WriteLine("İkinci Sayıyı Giriniz");
+                            Console.Write("İkinci Sayıyı Giriniz");
                             int ikinciSayi = int.Parse(Console.ReadLine());
 
                             if (switcher == 1)
@@ -95,10 +97,21 @@ namespace Boxtester
 
                         case 3:
                             Console.WriteLine("Burda Kutunun Ağırlığını Hesaplayacağız");
-                            Console.WriteLine("Lütfen bir değer giriniz");
+                            Console.Write("Lütfen bir değer giriniz");
                             boxT agirlik = new boxT();
                             agirlik.setWeight(int.Parse(Console.ReadLine()));
                             Console.WriteLine(agirlik.getWeight());
+                            break;
+
+                        case 4:
+                            Console.WriteLine("Burda karenin ağırlığını hesaplayacağız.");
+                            Kare kareHes = new Kare();
+                            Console.Write("Yükseklik girin:");
+                            kareHes.setHeight(int.Parse(Console.ReadLine()));
+                            Console.Write("En girin:");
+                            kareHes.setWidth(int.Parse(Console.ReadLine()));
+                            Console.WriteLine(kareHes.kareAlan());
+                            Console.ReadKey();
                             break;
                     }
 
