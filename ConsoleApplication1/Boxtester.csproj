@@ -63,6 +63,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shape.cs" />
+    <Compile Include="tcSil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
